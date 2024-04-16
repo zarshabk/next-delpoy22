@@ -1,0 +1,170 @@
+[33mcommit 1fd0d9e4176e4f89c64a3f3cf512f047b50bbde6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: zarshab <zarshabrafiq1092@gmail.com>
+Date:   Tue Apr 16 16:06:54 2024 +0500
+
+    initial deployment
+
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 77d44d4..18924a2 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -8,9 +8,13 @@[m
+       "name": "my-app",[m
+       "version": "0.1.0",[m
+       "dependencies": {[m
+[32m+[m[32m        "bcryptjs": "^2.4.3",[m
+[32m+[m[32m        "mongoose": "^8.3.1",[m
+         "next": "14.2.1",[m
+         "react": "^18",[m
+[31m-        "react-dom": "^18"[m
+[32m+[m[32m        "react-dom": "^18",[m
+[32m+[m[32m        "react-hot-toast": "^2.4.1",[m
+[32m+[m[32m        "react-icons": "^5.0.1"[m
+       },[m
+       "devDependencies": {[m
+         "eslint": "^8",[m
+[36m@@ -233,6 +237,14 @@[m
+         "@jridgewell/sourcemap-codec": "^1.4.14"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/@mongodb-js/saslprep": {[m
+[32m+[m[32m      "version": "1.1.5",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@mongodb-js/saslprep/-/saslprep-1.1.5.tgz",[m
+[32m+[m[32m      "integrity": "sha512-XLNOMH66KhJzUJNwT/qlMnS4WsNDWD5ASdyaSH3EtK+F4r/CFGa3jT4GNi4mfOitGvWXtdLgQJkQjxSVrio+jA==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "sparse-bitfield": "^3.0.3"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/@next/env": {[m
+       "version": "14.2.1",[m
+       "resolved": "https://registry.npmjs.org/@next/env/-/env-14.2.1.tgz",[m
+[36m@@ -453,6 +465,19 @@[m
+       "integrity": "sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==",[m
+       "dev": true[m
+     },[m
+[32m+[m[32m    "node_modules/@types/webidl-conversions": {[m
+[32m+[m[32m      "version": "7.0.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/webidl-conversions/-/webidl-conversions-7.0.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-CiJJvcRtIgzadHCYXw7dqEnMNRjhGZlYK05Mj9OyktqV8uVT8fD2BFOB7S1uwBE3Kj2Z+4UyPmFw/Ixgw/LAlA=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/@types/whatwg-url": {[m
+[32m+[m[32m      "version": "11.0.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@types/whatwg-url/-/whatwg-url-11.0.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-lXCmTWSHJvf0TRSO58nm978b8HJ/EdsSsEKLd3ODHFjo+3VGAyyTp4v50nWvwtzBxSMQrVOK7tcuN0zGPLICMw==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@types/webidl-conversions": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/@typescript-eslint/parser": {[m
+       "version": "7.2.0",[m
+       "resolved": "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.2.0.tgz",[m
+[36m@@ -900,6 +925,11 @@[m
+       "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",[m
+       "dev": true[m
+     },[m
+[32m+[m[32m    "node_modules/bcryptjs": {[m
+[32m+[m[32m      "version": "2.4.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/bcryptjs/-/bcryptjs-2.4.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ=="[m
+[32m+[m[32m    },[m
+     "node_modules/binary-extensions": {[m
+       "version": "2.3.0",[m
+       "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.3.0.tgz",[m
+[36m@@ -934,6 +964,14 @@[m
+         "node": ">=8"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/bson": {[m
+[32m+[m[32m      "version": "6.6.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/bson/-/bson-6.6.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-BVINv2SgcMjL4oYbBuCQTpE3/VKOSxrOA8Cj/wQP7izSzlBGVomdm+TcUd0Pzy0ytLSSDweCKQ6X3f5veM5LQA==",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=16.20.1"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/busboy": {[m
+       "version": "1.6.0",[m
+       "resolved": "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz",[m
+[36m@@ -1117,6 +1155,12 @@[m
+         "node": ">=4"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/csstype": {[m
+[32m+[m[32m      "version": "3.1.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==",[m
+[32m+[m[32m      "peer": true[m
+[32m+[m[32m    },[m
+     "node_modules/damerau-levenshtein": {[m
+       "version": "1.0.8",[m
+       "resolved": "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz",[m
+[36m@@ -1178,7 +1222,6 @@[m
+       "version": "4.3.4",[m
+       "resolved": "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz",[m
+       "integrity": "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==",[m
+[31m-      "dev": true,[m
+       "dependencies": {[m
+         "ms": "2.1.2"[m
+       },[m
+[36m@@ -2235,6 +2278,14 @@[m
+         "url": "https://github.com/sponsors/sindresorhus"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/goober": {[m
+[32m+[m[32m      "version": "2.1.14",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/goober/-/goober-2.1.14.tgz",[m
+[32m+[m[32m      "integrity": "sha512-4UpC0NdGyAFqLNPnhCT2iHpza2q+RAY3GV85a/mRPdzyPQMsj0KmMMuetdIkzWRbJ+Hgau1EZztq8ImmiMGhsg==",[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "csstype": "^3.0.10"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/gopd": {[m
+       "version": "1.0.1",[m
+       "resolved": "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz",[m
+[36m@@ -2884,6 +2935,14 @@[m
+         "node": ">=4.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/kareem": {[m
+[32m+[m[32m      "version": "2.6.3",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/kareem/-/kareem-2.6.3.tgz",[m
+[32m+[m[32m      "integrity": "sha512-C3iHfuGUXK2u8/ipq9LfjFfXFxAZMQJJq7vLS45r3D9Y2xQ/m4S8zaR4zMLFWh9AsNPXmcFfUDhTEO8UIC/V6Q==",[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=12.0.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/keyv": {[m
+       "version": "4.5.4",[m
+       "resolved": "https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz",[m
+[36m@@ -2980,6 +3039,11 @@[m
+         "node": "14 || >=16.14"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/memory-pager": {[m
+[32m+[m[32m      "version": "1.5.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/memory-pager/-/memory-pager-1.5.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg=="[m
+[32m+[m[32m    },[m
+     "node_modules/merge2": {[m
+       "version": "1.4.1",[m
+       "resolved": "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz",[m
+[36m@@ -3032,11 +3096,109 @@[m
+         "node": ">=16 || 14 >=14.17"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/mongodb": {[m
+[32m+[m[32m      "version": "6.5.0",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/mongodb/-/mongodb-6.5.0.tgz",[m
+[32m+[m[32m      "integrity": "sha512-Fozq68InT+JKABGLqctgtb8P56pRrJFkbhW0ux+x1mdHeyinor8oNzJqwLjV/t5X5nJGfTlluxfyMnOXNggIUA==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@mongodb-js/saslprep": "^1.1.5",[m
+[32m+[m[32m        "bson": "^6.4.0",[m
+[32m+[m[32m        "mongodb-connection-string-url": "^3.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "engines": {[m
+[32m+[m[32m        "node": ">=16.20.1"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "@aws-sdk/credential-providers": "^3.188.0",[m
+[32m+[m[32m        "@mongodb-js/zstd": "^1.1.0",[m
+[32m+[m[32m        "gcp-metadata": "^5.2.0

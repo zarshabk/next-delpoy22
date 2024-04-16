@@ -1,16 +1,19 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
   const [scroll, setScroll] = useState(false);
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 150) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-  });
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.pageYOffset > 150) {
+  //       setScroll(true);
+  //     } else {
+  //       setScroll(false);
+  //     }
+  //   });
+  // }, []);
   return (
     <div
       className={`h-[80px] w-full flex items-center justify-between z-50 ${
